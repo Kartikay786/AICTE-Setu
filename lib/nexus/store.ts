@@ -151,7 +151,8 @@ function transition(
 
 export function submitApplication(actor: DemoUser, form: ApplicationForm, documents: UploadedDocument[]) {
   const data = getSnapshot().data
-  const next = Math.max(...data.applications.map((a) => Number(a.refNo.split('/').pop()))) + 1
+  const refNumbers = data.applications.map((a) => Number(a.refNo.split('/').pop()) || 0)
+  const next = Math.max(0, ...refNumbers) + 1
   const at = new Date().toISOString()
   const app: Application = {
     id: uid('app'),
@@ -228,11 +229,16 @@ export function scheduleInspection(
   visit: Pick<EvcRecord, 'visitDate' | 'visitTime' | 'committee'>,
   isReschedule: boolean,
 ) {
+  const date = visit.visitDate ? new Date(`${visit.visitDate}T00:00:00`) : null
+  const formatted = date && !Number.isNaN(date.getTime())
+    ? date.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })
+    : visit.visitDate || 'selected date'
+
   transition(
     appId,
     actor,
     'EVC Scheduled',
-    `${isReschedule ? 'Inspection rescheduled' : 'Inspection scheduled'} for ${new Date(visit.visitDate!).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })}, ${visit.visitTime}`,
+    `${isReschedule ? 'Inspection rescheduled' : 'Inspection scheduled'} for ${formatted}, ${visit.visitTime}`,
     visit.committee ? `Committee: ${visit.committee}` : undefined,
     (app) => ({ evc: { ...app.evc!, ...visit } }),
   )

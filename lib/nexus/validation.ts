@@ -54,7 +54,9 @@ function worst(statuses: CheckStatus[]): CheckStatus {
 
 export function formatDate(iso?: string) {
   if (!iso) return '—'
-  return new Date(iso).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })
+  const date = new Date(iso)
+  if (Number.isNaN(date.getTime())) return '—'
+  return date.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })
 }
 
 export function checkFile(fileName: string, mimeType: string, size: number): Check[] {

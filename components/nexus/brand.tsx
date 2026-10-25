@@ -8,8 +8,8 @@ export function BrandMark() {
         <span className="rounded-sm bg-primary-foreground" />
       </span>
       <span className="flex flex-col leading-none">
-        <span className="text-[15px] font-semibold tracking-tight text-foreground">AICTE Nexus</span>
-        <span className="mt-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Approval Portal · Demo</span>
+        <span className="text-[15px] font-semibold tracking-tight text-foreground">AICTE Setu</span>
+        <span className="mt-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Approval Portal</span>
       </span>
     </span>
   )

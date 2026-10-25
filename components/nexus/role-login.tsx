@@ -64,7 +64,7 @@ export function RoleLogin() {
   const [pending, setPending] = useState(false)
 
   // Dummy password field: UI only, not used for authentication.
-  const [password, setPassword] = useState('NexusDemo@123')
+  const [password, setPassword] = useState('SetuDemo@123')
   const [showPassword, setShowPassword] = useState(false)
 
   useEffect(() => {
@@ -102,8 +102,23 @@ export function RoleLogin() {
   return (
     <div className="grid min-h-dvh lg:grid-cols-[1fr_minmax(0,560px)]">
       {/* Left panel */}
-      <section className="relative hidden flex-col justify-between overflow-hidden bg-foreground p-10 text-background lg:flex">
-        <div className="flex items-center gap-2.5">
+      <section
+        className="relative hidden flex-col justify-between overflow-hidden
+    bg-foreground p-10 text-background lg:flex"
+        style={{
+          backgroundImage: `
+      linear-gradient(
+        90deg,
+        rgba(5, 18, 43, 0.88) 0%,
+        rgba(5, 18, 43, 0.76) 48%,
+        rgba(5, 18, 43, 0.25) 100%
+      ),
+      url('/images/nexus-background.png')
+    `,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >  <div className="flex items-center gap-2.5">
           <span
             className="grid size-8 grid-cols-2 gap-0.5 rounded-lg bg-primary p-1.5"
             aria-hidden
@@ -115,7 +130,7 @@ export function RoleLogin() {
           </span>
 
           <span className="text-[15px] font-semibold tracking-tight">
-            AICTE Nexus
+            AICTE Setu
           </span>
         </div>
 
@@ -176,7 +191,7 @@ export function RoleLogin() {
 
         <div className="flex flex-col gap-2">
           <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-            Sign in to the Nexus
+            Sign in to the AICTE Setu
           </h2>
 
           <p className="text-sm leading-relaxed text-muted-foreground">
