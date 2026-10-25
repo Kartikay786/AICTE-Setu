@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', ui-sans-serif, system-ui;
+  --font-mono: 'IBM Plex Mono', 'IBM Plex Mono Fallback', ui-monospace;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-destructive-soft: var(--destructive-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-strong: var(--primary-strong);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #1c1f24;
+  --card: #ffffff;
+  --card-foreground: #1c1f24;
+  --popover: #ffffff;
+  --popover-foreground: #1c1f24;
+  --primary: #ff8434;
+  --primary-strong: #c2551a;
+  --primary-soft: #fff1e7;
+  --primary-foreground: #ffffff;
+  --surface: #f6f6f5;
+  --secondary: #f1f1ef;
+  --secondary-foreground: #1c1f24;
+  --muted: #f1f1ef;
+  --muted-foreground: #5f6670;
+  --accent: #f1f1ef;
+  --accent-foreground: #1c1f24;
+  --success: #1f8a5b;
+  --success-soft: #e8f5ee;
+  --destructive: #d23f31;
+  --destructive-soft: #fdecea;
+  --border: #e6e6e3;
+  --input: #dcdcd8;
+  --ring: #ff8434;
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+dialog::backdrop {
+  background: rgb(28 31 36 / 0.4);
+  backdrop-filter: blur(2px);
+}
