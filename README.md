@@ -117,7 +117,7 @@ AICTE Setu aims to make the approval and compliance process more transparent, or
 
 ## Team
 
-**Six n Sync**
+**Six in Sync**
 
 ## Problem Statement
 
