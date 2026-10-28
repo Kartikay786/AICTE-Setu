@@ -106,18 +106,19 @@ export function RoleLogin() {
         className="relative hidden flex-col justify-between overflow-hidden
     bg-foreground p-10 text-background lg:flex"
         style={{
-          backgroundImage: `
-      linear-gradient(
-        90deg,
-        rgba(5, 18, 43, 0.88) 0%,
-        rgba(5, 18, 43, 0.76) 48%,
-        rgba(5, 18, 43, 0.25) 100%
-      ),
-      url('/images/setu-background.png')
-    `,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+  backgroundImage: `
+    linear-gradient(
+      90deg,
+      rgba(5, 18, 43, 0.88) 0%,
+      rgba(5, 18, 43, 0.76) 48%,
+      rgba(5, 18, 43, 0.25) 100%
+    ),
+    url('/images/setu-background.png')
+  `,
+  backgroundSize: 'cover',
+  backgroundPosition: 'right center',
+  backgroundRepeat: 'no-repeat',
+}}
       >  <div className="flex items-center gap-2.5">
           <span
             className="grid size-8 grid-cols-2 gap-0.5 rounded-lg bg-primary p-1.5"
