@@ -113,7 +113,7 @@ export function RoleLogin() {
         rgba(5, 18, 43, 0.76) 48%,
         rgba(5, 18, 43, 0.25) 100%
       ),
-      url('/images/nexus-background.png')
+      url('/images/setu-background.png')
     `,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
