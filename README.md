@@ -1,6 +1,6 @@
 # AICTE Setu
 
-**Team Name:** Six n Sync  
+**Team Name:** Six in Sync  
 **Problem ID:** SIH26262  
 **Problem Statement Title:** Integrated AICTE Approval Workflow Automation, Compliance Monitoring and Alert Management System
 
