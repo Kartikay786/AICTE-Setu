@@ -116,7 +116,7 @@ export function RoleLogin() {
     url('/images/setu-background.png')
   `,
   backgroundSize: 'cover',
-  backgroundPosition: 'right center',
+  backgroundPosition: '70% center',
   backgroundRepeat: 'no-repeat',
 }}
       >  <div className="flex items-center gap-2.5">
